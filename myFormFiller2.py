@@ -2,13 +2,13 @@ import pyautogui, webbrowser
 import os
 import time
 
-import pyperclip
+import pyperclip, subprocess
 
 #have a text file called pyautoguidemo.txt
 #in the text file are five lines: first line: John, second line: Smith, third line: john@smith.com, fourth line: 1231231234, fifth line: Hello
 #this program will fill out a form with the info in the text file (rather than the data being hard coded in the python program)
 
-os.startfile("Notepad.exe") #open notepad
+"""os.startfile("Notepad.exe") #open notepad
 time.sleep(1)
 
 pyautogui.press(["alt", "f", "o"]) #open new file
@@ -17,7 +17,10 @@ time.sleep(1)
 pyautogui.typewrite(os.getcwd()+ "\\" + "pyautoguidemo.txt")
 time.sleep(1)
 
-pyautogui.write("enter")
+pyautogui.write("enter")"""
+
+#Reduce 7 lines of code (above) to 1 line of code (below) using Popen() function
+subprocess.Popen(['C:\\Windows\\notepad.exe', 'C:\\Users\\mmcclain\\python\\pyautoguidemo.txt'])
 
 pyautogui.PAUSE = 0.5
 print('Ensure that the browser window is active and the form is loaded!')
